@@ -16,6 +16,7 @@ import StateCalculator from "./components/StateCalculator"
 import StateDemo from "./components/StateDemo"
 import StateForm from "./components/StateForm"
 import StatePractise from "./components/StatePractise"
+import StudentObject from "./components/StudentObject"
 import Third from "./components/Third"
 
 function App() {
@@ -118,6 +119,10 @@ function App() {
     <hr></hr>
 
     <Greaterthree></Greaterthree>
+
+     <hr></hr>
+
+    <StudentObject></StudentObject>
 
     <hr></hr>
 
