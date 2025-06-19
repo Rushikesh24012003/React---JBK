@@ -1,4 +1,5 @@
 import ArrayRendering from "./components/ArrayRendering"
+import Clock from "./components/Clock"
 import EventListner from "./components/EventListner"
 import First from "./components/First"
 import Fourth from "./components/Fourth"
@@ -117,6 +118,12 @@ function App() {
     <hr></hr>
 
     <Greaterthree></Greaterthree>
+
+    <hr></hr>
+
+    <Clock></Clock>
+
+    <hr></hr>
     </>
   )
 }
