@@ -2,6 +2,8 @@ import ArrayRendering from "./components/ArrayRendering"
 import Clock from "./components/Clock"
 import EventListner from "./components/EventListner"
 import First from "./components/First"
+import FormValidation from "./components/FormValidation"
+import FormValidation1 from "./components/FormValidation1"
 import Fourth from "./components/Fourth"
 import Greaterthree from "./components/Greaterthree"
 import Greet from "./components/Greet"
@@ -127,6 +129,14 @@ function App() {
     <hr></hr>
 
     <Clock></Clock>
+
+    <hr></hr>
+
+    <FormValidation></FormValidation>
+
+    <hr></hr>
+
+    <FormValidation1></FormValidation1>
 
     <hr></hr>
     </>
