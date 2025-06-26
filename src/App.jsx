@@ -41,6 +41,9 @@ import Admin from "./components/Admin";
 import Book from "./components/Book";
 import Employee from "./components/Employee";
 import EmployeeDetails from "./components/EmployeeDetails";
+import EmployeeDetailsSearch from "./components/EmployeeDetailsSearch";
+import BookDetails from "./components/BookDetails";
+import BookDetailsSearch from "./components/BookDetailsSearch";
 
 function App() {
   let a = 5;
@@ -74,6 +77,20 @@ function App() {
   const user = () => {
     navigate("/service/user");
   };
+
+  const [txt,setTxt] = useState()
+  const navigate1 = useNavigate()
+
+  const [txt1 , setTxt1] = useState()
+  const navigate2 = useNavigate()
+
+  function searchHandler(){
+    navigate1(`/employee-search/${txt}`)
+  }
+
+  function searchHandler1(){
+    navigate2(`/book-search/${txt1}`)
+  }
 
   return (
     <>
@@ -272,15 +289,32 @@ function App() {
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
+           <div class="d-flex mb-2">
+    <input
+      class="form-control mr-2"
+      type="search"
+      placeholder="Search Employee"
+      aria-label="Search"
+      onChange={(e) => setTxt(e.target.value)}
+    />
+    <button class="btn btn-outline-success" type="button" onClick={searchHandler}>
+      Search Employee
+    </button>
+  </div>
+
+  {/* Search Book */}
+  <div class="d-flex">
+    <input
+      class="form-control mr-2"
+      type="search"
+      placeholder="Search Book"
+      aria-label="Search"
+      onChange={(e) => setTxt1(e.target.value)}
+    />
+    <button class="btn btn-outline-success" type="button" onClick={searchHandler1}>
+      Search Book
+    </button>
+  </div>
           </form>
         </div>
       </nav>
@@ -292,6 +326,9 @@ function App() {
         <Route path="book" element={<Book></Book>}></Route>
         <Route path="employee" element={<Employee></Employee>}></Route>
         <Route path="employee/:id" element={<EmployeeDetails></EmployeeDetails>}></Route>
+        <Route path="book/:id" element={<BookDetails></BookDetails>}></Route>
+       <Route path="/employee-search/:name" element={<EmployeeDetailsSearch></EmployeeDetailsSearch>}></Route> 
+        <Route path="/book-search/:title" element={<BookDetailsSearch></BookDetailsSearch>}></Route>
         <Route path="*" element={<PagenotFound></PagenotFound>}></Route>
       </Routes>
     </>
