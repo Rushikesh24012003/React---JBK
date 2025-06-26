@@ -40,6 +40,7 @@ import User from "./components/User";
 import Admin from "./components/Admin";
 import Book from "./components/Book";
 import Employee from "./components/Employee";
+import EmployeeDetails from "./components/EmployeeDetails";
 
 function App() {
   let a = 5;
@@ -290,6 +291,7 @@ function App() {
         <Route path="" element={<Home></Home>}>Home</Route>
         <Route path="book" element={<Book></Book>}></Route>
         <Route path="employee" element={<Employee></Employee>}></Route>
+        <Route path="employee/:id" element={<EmployeeDetails></EmployeeDetails>}></Route>
         <Route path="*" element={<PagenotFound></PagenotFound>}></Route>
       </Routes>
     </>
